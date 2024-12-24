@@ -1,0 +1,2 @@
+<footer class="bg-white dark:bg-gray-900">
+</footer>
