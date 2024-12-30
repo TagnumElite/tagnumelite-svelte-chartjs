@@ -7,8 +7,11 @@
     "chart",
     "chartjs"
   ],
+  "homepage": "https://github.com/TagnumElite/tagnumelite-svelte-chartjs",
   "author": "TagnumElite <me@tagnumelite.com> (https://tagnumelite.com)",
   "license": "MIT",
+  "repository": "github:TagnumElite/tagnumelite-svelte-chartjs",
+  "bugs": "https://github.com/TagnumElite/tagnumelite-svelte-chartjs/issues",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
