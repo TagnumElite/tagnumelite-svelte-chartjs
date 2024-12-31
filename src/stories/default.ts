@@ -5,5 +5,5 @@ export const DEFAULT_PARAMS = {
 };
 
 export const DEFAULT_ARG_TYPES = {
-    advanced: { control: 'boolean' },
+  advanced: { control: 'boolean' }
 };
