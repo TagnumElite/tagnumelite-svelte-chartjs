@@ -7,7 +7,7 @@
 
   let {
     data,
-    chart = $bindable(),
+    chart = $bindable(null),
     canvasRef = $bindable(),
     ...props
   }: ChartProps<'doughnut'> = $props();
