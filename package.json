@@ -1,17 +1,26 @@
 {
   "name": "@tagnumelite/svelte-chartjs",
   "version": "0.0.1",
-  "description": "",
+  "description": "Svelte Component Wrappers for Chart.JS",
   "keywords": [
     "svelte",
     "chart",
     "chartjs"
   ],
   "homepage": "https://github.com/TagnumElite/tagnumelite-svelte-chartjs",
-  "author": "TagnumElite <me@tagnumelite.com> (https://tagnumelite.com)",
+  "author": {
+    "name": "TagnumElite",
+    "email": "me@tagnumelite.com",
+    "url": "https://tagnumelite.com"
+  },
   "license": "MIT",
-  "repository": "github:TagnumElite/tagnumelite-svelte-chartjs",
-  "bugs": "https://github.com/TagnumElite/tagnumelite-svelte-chartjs/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TagnumElite/tagnumelite-svelte-chartjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TagnumElite/tagnumelite-svelte-chartjs/issues"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
