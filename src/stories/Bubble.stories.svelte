@@ -15,4 +15,4 @@
   });
 </script>
 
-<Story name="Bubble Graph" />
+<Story name="Default" />

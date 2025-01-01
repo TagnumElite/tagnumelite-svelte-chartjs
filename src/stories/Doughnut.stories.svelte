@@ -15,4 +15,4 @@
   });
 </script>
 
-<Story name="Doughnut Graph" />
+<Story name="Default" />

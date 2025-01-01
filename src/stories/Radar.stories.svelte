@@ -15,4 +15,4 @@
   });
 </script>
 
-<Story name="Radar Graph" />
+<Story name="Default" />

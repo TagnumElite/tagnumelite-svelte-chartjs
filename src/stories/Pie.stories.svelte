@@ -15,4 +15,4 @@
   });
 </script>
 
-<Story name="Pie Graph" />
+<Story name="Default" />

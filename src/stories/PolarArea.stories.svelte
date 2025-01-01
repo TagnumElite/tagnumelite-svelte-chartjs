@@ -15,4 +15,4 @@
   });
 </script>
 
-<Story name="PolarArea Graph" />
+<Story name="Default" />

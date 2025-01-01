@@ -15,4 +15,4 @@
   });
 </script>
 
-<Story name="Scatter Graph" />
+<Story name="Default" />

@@ -15,4 +15,4 @@
   });
 </script>
 
-<Story name="Bar Graph" />
+<Story name="Default" />
