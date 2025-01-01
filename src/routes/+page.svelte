@@ -85,11 +85,15 @@
 
 <section
 >
+  <div class="mx-auto max-w-screen-xl px-4 py-24 text-center lg:py-56">
     <h1
     >
       Svelte + Chart.JS
     </h1>
+    <p class="mb-8 text-lg font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-xl">
       A Svelte wrapper for <a href="https://www.chartjs.org/">Chart.JS</a>
+    </p>
+    <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
       <a
         href="#installation"
       >
