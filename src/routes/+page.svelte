@@ -1,19 +1,10 @@
 <script lang="ts">
+  import PolarArea from '$lib/PolarArea.svelte';
+  import type { ChartData } from 'chart.js';
   import { onMount } from 'svelte';
-  import BarExample from './examples/BarExample.svelte';
-  import BubbleExample from './examples/BubbleExample.svelte';
-  import LineExample from './examples/LineExample.svelte';
-  import PieExample from './examples/PieExample.svelte';
-  import PolarAreaExample from './examples/PolarAreaExample.svelte';
-  import RadarExample from './examples/RadarExample.svelte';
-  import ScatterExample from './examples/ScatterExample.svelte';
-  import DoughnutExample from './examples/DoughnutExample.svelte';
-  import { randomColor } from '../utils.js';
+  import { LANGUAGE_COLORS, randomColor } from '../utils.js';
 
-  const LANGUAGE_COLORS: { [language: string]: string } = {
-    svelte: 'rgb(168, 8, 8)'
-  };
-  const XP_THRESHOLD = 5000;
+  let xp_threshold = $state(5000);
 
   let username = $state('tagnumelite');
   let languageXPData: ChartData<'polarArea'> | undefined = $state();
@@ -57,7 +48,7 @@
               const name = labelKeys[index];
               const xp = codeStatsData.languages[name].xps;
 
-              if (xp >= XP_THRESHOLD) {
+              if (xp >= xp_threshold) {
                 labels.push(name);
                 xps.push(xp);
                 if (name in LANGUAGE_COLORS) {
@@ -87,49 +78,18 @@
         .finally(() => {
           updateStats = false;
         });
+    } else {
     }
   });
 </script>
-<div id="examples">
-  <h1>Examples</h1>
-  <section>
-    <BarExample />
-    <BubbleExample />
-    <DoughnutExample />
-    <LineExample />
-    <PieExample />
-    <PolarAreaExample />
-    <RadarExample />
-    <ScatterExample />
-  </section>
-</div>
 
-<br />
-
-{#if codeStatsData}
-  <div class="container">
-    <div class="top">
-      <a href="https://codestats.net" target="_blank"><h1>Code::Stats Chart Example</h1></a>
-      <p>Some users to try are TagnumElite and Nicd</p>
     </div>
 
-    <input type="text" name="Username" id="username" bind:value={username} />
-    <button
-      onclick={() => {
-        updateStats = true;
-      }}>Check Stats</button
     >
-    <h1>CodeStats: {codeStatsData.user}</h1>
 
-    {#if languageXPData}
-      <PolarArea data={languageXPData} />
-      <p>Lang XP</p>
-      <pre>{JSON.stringify(languageXPData, null, 2)}</pre>
-    {/if}
 
     <pre>{JSON.stringify(codeStatsData, null, 2)}</pre>
   </div>
 {:else}
   <p>Failed to fetch code stats data</p>
 {/if}
-

@@ -5,3 +5,8 @@ export function randomColor() {
 
   return `rgb(${red}, ${green}, ${blue})`;
 }
+
+export const LANGUAGE_COLORS: { [language: string]: string } = {
+  svelte: 'rgb(1168, 8, 8)',
+  typescript: 'rgb(0, 255, 0)'
+};
