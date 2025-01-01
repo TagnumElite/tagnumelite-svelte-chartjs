@@ -83,12 +83,75 @@
   });
 </script>
 
+<section
+>
+    <h1
+    >
+      Svelte + Chart.JS
+    </h1>
+      A Svelte wrapper for <a href="https://www.chartjs.org/">Chart.JS</a>
+      <a
+        href="#installation"
+      >
+        Install
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="installation" class="grid grid-cols-2 bg-gray-700 bg-blend-multiply">
+  <div
+    class="px-a w-auto max-w-screen-xl rounded-r-md border-r-2 border-black bg-white py-4 lg:py-8"
+  >
+    <h1
+      class="mb-4 text-center text-2xl font-extrabold leading-none tracking-tight text-black md:text-3xl lg:text-4xl"
+    >
+      Installation
+    </h1>
+    <div class="text-md mb-8 px-4 font-normal text-gray-600 lg:text-lg">
+      <p>Install the package with the required peer dependencies</p>
+    </div>
+  </div>
+  <div class="mx-auto px-4 py-4 text-center lg:py-8">
+    <pre><code
+        >npm i --save chart.js @tagnumelite/svelte-chartjs
+pnpm add chart.js @tagnumelite/svelte-chartjs
+yarn add chart.js @tagnumelite/svelte-chartjs
+bun add chart.js @tagnumelite/svelte-chartjs</code
+      ></pre>
+  </div>
+</section>
+
+<br />
+
+{#if codeStatsData}
+  <div class="container flex flex-1 flex-grow basis-4 flex-wrap justify-between">
+    <div class="left text-center">
+      <h1 class="font-extrabold">
+        <a href="https://codestats.net" target="_blank">Code::States</a> Chart Example
+      </h1>
+      <p class="text-gray-100">Example Usernames: 'TagnumElite', 'Nicd'</p>
+
+      <input type="number" name="XP Threshold" id="xp_threshold" bind:value={xp_threshold} />
+      <input type="text" name="Username" id="username" bind:value={username} />
+      <button
+        onclick={() => {
+          updateStats = true;
+        }}>Check Stats</button
+      >
+      <h1>CodeStats: {codeStatsData.user}</h1>
+    </div>
+    <div class="right">
+      {#if languageXPData}
+        <PolarArea data={languageXPData} />
+      {/if}
     </div>
 
-    >
-
-
+    <!--
+    <p>Lang XP</p>
+    <pre>{JSON.stringify(languageXPData, null, 2)}</pre>
     <pre>{JSON.stringify(codeStatsData, null, 2)}</pre>
+  -->
   </div>
 {:else}
   <p>Failed to fetch code stats data</p>
